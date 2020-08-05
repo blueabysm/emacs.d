@@ -4,6 +4,7 @@
 
 ;; See also init-local.el
 
+(require 'init-lsp)
 (require 'init-go)
 (require 'init-keys)
 (require 'init-proxy)
