@@ -15,10 +15,10 @@
   (setq company-begin-commands '(self-insert-command))
   (when (maybe-require-package 'lsp-mode)
     (add-hook 'go-mode-hook (lambda ()
+                              (lsp)
                               (go-eldoc-setup)
                               (define-key go-mode-map (kbd "C-c C-l") 'go-direx-pop-to-buffer)
                               (set (make-local-variable 'company-backends) '(company-lsp))
-                              (lsp)
                               (company-mode)))))
 
 (when (memq window-system '(mac ns))
